@@ -1,5 +1,10 @@
 ## Recent Research Papers and Artifacts
 
+
+- Fact-Checking Sustainability Objectives Using Multimodal Retrieval-Augmented Generation
+[<span class="emoji">📄</span>](/assets/pdfs/mahdavi2025fact.pdf) 
+[<span class="emoji">📁</span>](https://github.com/m-mahdavi/sustainability-fact-checker)
+<!---->
 - Combat Greenwashing with GoalSpotter: Automatic Sustainability Objective Detection in Heterogeneous Reports 
 [<span class="emoji">💻</span>](https://dl.acm.org/doi/10.1145/3627673.3680110)
 [<span class="emoji">📄</span>](/assets/pdfs/mahdavi2024combat.pdf) 
