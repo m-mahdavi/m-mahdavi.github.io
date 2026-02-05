@@ -173,3 +173,34 @@ footer {
     font-size: 18px;
   }
 }
+
+/* --- HARD MOBILE FIXES --- */
+
+.particles-title {
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  hyphens: auto;
+}
+
+@media (max-width: 768px) {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .jumbotron {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  #main-content {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
