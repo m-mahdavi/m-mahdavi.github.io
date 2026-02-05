@@ -23,7 +23,7 @@ body {
 
 #particles-js {
   position: relative;
-  min-height: 70vh;
+  min-height: 70vh;         /* better mobile behavior */
   width: 100%;
   text-align: center;
 }
@@ -35,7 +35,7 @@ body {
 
 .jumbotron {
   background-color: transparent !important;
-  padding: 4rem 1.5rem 2.5rem;
+  padding: 4rem 1rem 2rem;
   margin-bottom: 0;
 }
 
@@ -93,9 +93,9 @@ body {
   transform: scale(1.15);
 }
 
-/* Main content area with good side margins */
+/* Main content */
 #main-content {
-  padding: 2rem 1.25rem 3rem;
+  padding: 2rem 1rem 3rem;
   max-width: 900px;
   margin: 0 auto;
 }
@@ -113,10 +113,7 @@ h2 {
   padding-bottom: 0.3em;
 }
 
-h3 {
-  font-size: 1.7rem;
-  font-weight: 500;
-}
+h3 { font-size: 1.7rem; font-weight: 500; }
 
 a {
   color: var(--link-color);
@@ -129,13 +126,6 @@ a:hover, a:focus {
   text-decoration: underline;
 }
 
-blockquote {
-  margin: 1.5em 1rem;
-  padding: 0 1rem;
-  border-left: 5px solid #555;
-  color: #ccc;
-}
-
 footer {
   border-top: 2px solid #444;
   padding: 2rem 1rem;
@@ -145,60 +135,19 @@ footer {
 }
 
 /* ────────────────────────────────────────
-   MOBILE ADJUSTMENTS - more breathing room
+   Mobile-first media queries
 ───────────────────────────────────────── */
 
 @media (max-width: 576px) {
-  .jumbotron {
-    padding: 3.5rem 1.25rem 2rem;
-  }
-
-  #main-content {
-    padding: 1.5rem 1.5rem 2.5rem;     /* increased side padding for mobile */
-  }
-
-  .particles-photo {
-    width: 140px;
-    max-width: 38vw;
-  }
-
-  .social-icons {
-    gap: 1.2rem;
-  }
-
-  .icon-style {
-    width: 44px;
-    height: 44px;
-  }
-
-  h2 {
-    font-size: 1.8rem;
-  }
-
-  p, li, blockquote {
-    font-size: 1.05rem;               /* slightly better readability */
-  }
+  .jumbotron { padding: 3rem 0.8rem 1.5rem; }
+  .particles-photo { width: 140px; max-width: 38vw; }
+  .social-icons { gap: 1.2rem; }
+  .icon-style { width: 44px; height: 44px; }
+  h2 { font-size: 1.8rem; }
 }
 
 @media (min-width: 768px) {
-  body {
-    font-size: 1.1rem;
-  }
-
-  .jumbotron {
-    padding: 5rem 2rem 3rem;
-  }
-
-  #main-content {
-    padding: 3rem 2rem 4rem;
-  }
-
-  .particles-photo {
-    width: 220px;
-  }
-
-  .icon-style {
-    width: 60px;
-    height: 60px;
-  }
+  body { font-size: 1.1rem; }
+  .particles-photo { width: 220px; }
+  .icon-style { width: 60px; height: 60px; }
 }
