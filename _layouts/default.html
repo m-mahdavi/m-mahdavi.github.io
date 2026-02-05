@@ -1,87 +1,80 @@
 <!-- _layouts/default.html -->
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
+
+  <!-- REQUIRED for mobile responsiveness -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <title>{{ site.title }}</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="{{ '/assets/css/styles.css' }}">
+
+  <!-- Bootstrap CSS -->
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+  >
+
+  <!-- Your custom styles -->
+  <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
 </head>
 
 <body>
+
   <div id="particles-js" class="fullscreen">
-    <div class="jumbotron text-center">
-      <img class="particles-photo" src="{{ site.photo_url }}" alt="My Image"/>
-      <h1 class="particles-title">{{ site.title }}</h1>
-      <h1 class="particles-subtitle">{{ site.description }}</h1>
-      <div class="nowrap">
-        <a class="particles-icon" href="{{ site.work_url }}">
-          <svg class="icon-style" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <path d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418"></path>
-          </svg>
-        </a>
-        <a class="particles-icon" href="{{ site.scholar_url }}">
-          <svg class="icon-style" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <path d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25"></path>
-          </svg>
-        </a>
-        <a class="particles-icon" href="{{ site.github_url }}">
-          <svg class="icon-style" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <path d="M16 22.027v-2.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7a5.44 5.44 0 00-1.5-3.75 5.07 5.07 0 00-.09-3.77s-1.18-.35-3.91 1.48a13.38 13.38 0 00-7 0c-2.73-1.83-3.91-1.48-3.91-1.48A5.07 5.07 0 005 5.797a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7a3.37 3.37 0 00-.94 2.58v2.87M9 20.027c-3 .973-5.5 0-7-3"></path>
-          </svg>
-        </a>
-        <a class="particles-icon" href="{{ site.linkedin_url }}">
-          <svg class="icon-style" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <path d="M21 8v8a5 5 0 01-5 5H8a5 5 0 01-5-5V8a5 5 0 015-5h8a5 5 0 015 5zM7 17v-7"></path>
-            <path d="M11 17v-3.25M11 10v3.75m0 0c0-3.75 6-3.75 6 0V17M7 7.01l.01-.011"></path>
-          </svg>
-        </a>
-        <!--
-        <a class="particles-icon" href="https://scholar.google.com/citations?user=_f28BMMAAAAJ&hl=en">
-          <svg width="24px" height="24px" viewBox="0 0 24 24" stroke-width="1.5" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000">
-            <path d="M19 15v6H5v-6M16 17H8M15.913 14.663L8.087 13M16.713 12.38L9.463 9M18.173 10.642L12.044 5.5M20.034 8.804L15.109 2.5" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-          </svg>
-        </a>
-        -->
-        <!--
-        <a class="particles-icon" href="cv">
-          <svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" color="#000000">
-            <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-            <path d="m 10.743752,9.2133219 c 0,0 -4.5125702,-1.1966648 -4.5125705,2.7561791 -3e-7,4.258147 4.5640215,2.715661 4.5640215,2.715661" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-            <path d="m 12.449181,9.1023598 c 0,0 2.137936,5.8060432 2.686032,5.8060432 0.511982,0 2.633605,-5.7961624 2.633605,-5.7961624" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
-        </a>
-        -->
-        <!--
-        <a class="particles-icon" href="https://www.facebook.com/username">
-          <svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000">
-            <path d="M17 2h-3a5 5 0 00-5 5v3H6v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3V2z" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-          </svg>
-        </a>
-        -->
-        <!--
-        <a class="particles-icon" href="https://twitter.com/username">
-          <svg width="24px" height="24px" viewBox="0 0 24 24" stroke-width="1.5" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000">
-            <path d="M16.8198 20.7684L3.75317 3.96836C3.44664 3.57425 3.72749 3 4.22678 3H6.70655C6.8917 3 7.06649 3.08548 7.18016 3.23164L20.2468 20.0316C20.5534 20.4258 20.2725 21 19.7732 21H17.2935C17.1083 21 16.9335 20.9145 16.8198 20.7684Z" stroke="#000000" stroke-width="1.5"></path>
-            <path d="M20 3L4 21" stroke="#000000" stroke-width="1.5" stroke-linecap="round"></path>
-          </svg>
-        </a>
-        -->
-        <!--
-        <a class="particles-icon" href="https://www.instagram.com/username">
-          <svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000">
-            <path d="M12 16a4 4 0 100-8 4 4 0 000 8z" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-            <path d="M3 16V8a5 5 0 015-5h8a5 5 0 015 5v8a5 5 0 01-5 5H8a5 5 0 01-5-5z" stroke="#000000" stroke-width="1.5"></path>
-            <path d="M17.5 6.51l.01-.011" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-          </svg>
-        </a>
-        -->
+    <!-- Use Bootstrap container instead of raw jumbotron -->
+    <div class="container">
+      <div class="jumbotron text-center">
+
+        <img
+          class="particles-photo img-fluid"
+          src="{{ site.photo_url }}"
+          alt="My Image"
+        />
+
+        <h1 class="particles-title">{{ site.title }}</h1>
+        <h2 class="particles-subtitle">{{ site.description }}</h2>
+
+        <!-- Let icons wrap on small screens -->
+        <div class="d-flex flex-wrap justify-content-center gap-3">
+
+          <a class="particles-icon" href="{{ site.work_url }}">
+            <svg class="icon-style" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418"></path>
+            </svg>
+          </a>
+
+          <a class="particles-icon" href="{{ site.scholar_url }}">
+            <svg class="icon-style" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25"></path>
+            </svg>
+          </a>
+
+          <a class="particles-icon" href="{{ site.github_url }}">
+            <svg class="icon-style" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M16 22.027v-2.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7a5.44 5.44 0 00-1.5-3.75 5.07 5.07 0 00-.09-3.77s-1.18-.35-3.91 1.48a13.38 13.38 0 00-7 0c-2.73-1.83-3.91-1.48-3.91-1.48A5.07 5.07 0 005 5.797a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7a3.37 3.37 0 00-.94 2.58v2.87M9 20.027c-3 .973-5.5 0-7-3"></path>
+            </svg>
+          </a>
+
+          <a class="particles-icon" href="{{ site.linkedin_url }}">
+            <svg class="icon-style" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M21 8v8a5 5 0 01-5 5H8a5 5 0 01-5-5V8a5 5 0 015-5h8a5 5 0 015 5zM7 17v-7"></path>
+              <path d="M11 17v-3.25M11 10v3.75m0 0c0-3.75 6-3.75 6 0V17M7 7.01l.01-.011"></path>
+            </svg>
+          </a>
+
+        </div>
       </div>
     </div>
   </div>
 
-  <div id="main-content"> {{ content }} </div>
-  <footer> <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}</p> </footer>
-</body>
+  <main id="main-content" class="container my-5">
+    {{ content }}
+  </main>
 
+  <footer class="text-center py-4">
+    <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}</p>
+  </footer>
+
+</body>
 </html>
