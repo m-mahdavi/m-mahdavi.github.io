@@ -2,10 +2,12 @@
 
 
 - Automatic Detail Extraction from Sustainability Objectives Using Weak Supervision
+[<span class="emoji">💻</span>](https://openproceedings.org/2026/conf/edbt/paper-283.pdf)
 [<span class="emoji">📄</span>](/assets/pdfs/mahdavi2026automatic.pdf) 
 [<span class="emoji">📁</span>](https://github.com/Ferris-Solutions/goalspotter_public)
 <!---->
 - Fact-Checking Sustainability Objectives Using Multimodal Retrieval-Augmented Generation
+[<span class="emoji">💻</span>](https://ieeexplore.ieee.org/document/11415723)
 [<span class="emoji">📄</span>](/assets/pdfs/mahdavi2025fact.pdf) 
 [<span class="emoji">📁</span>](https://github.com/m-mahdavi/sustainability-fact-checker)
 <!---->
